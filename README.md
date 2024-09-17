@@ -31,64 +31,86 @@ Make sure you have the following installed on your system:
    git clone https://github.com/srinath-185/todos-app.git
 
 Navigate to the project directory:
-``` bash 
+```bash 
 cd todos-app
+```
 
 Install the dependencies:
+```bash
 npm install
+```
 
 Create the SQLite database todolist.db in the root directory of your project. You can simply start the server, and the database will be automatically created.
 
 Running the Application
 To run the API server:
+```bash 
 npm start
+```
 The server will be running at http://localhost:3000.
 
 Accessing Swagger API Documentation
 Once the server is running, the Swagger API documentation can be accessed at:
 
+```bash 
 http://localhost:3000/api-docs
+```
 API Endpoints
 Task API Routes
-Create a new task: POST /api/task/createTask
+Create a new task: 
+
+POST /api/task/createTask
 
 Request Body:
 json
-
-{
+```bash
+ {
   "task_name": "Task name",
   "task_title": "Task title",
   "task_description": "Task description"
-}
-Edit a task: PUT /api/task/editTask
+} 
+```
+Edit a task: 
+
+PUT /api/task/editTask
 
 Request Body:
 json
-
+```bash
 {
   "task_id": 1,
   "task_name": "Updated task name",
   "task_title": "Updated task title",
   "task_description": "Updated task description"
 }
-View all tasks: GET /api/task/viewTasks
+```
 
-Mark a task as completed: POST /api/task/markTaskCompleted
+View all tasks: 
 
-Request Body:
-json
+GET /api/task/viewTasks
 
-{
-  "task_id": 1
-}
-Delete a task (soft delete): DELETE /api/task/deleteTask
+Mark a task as completed: 
+
+POST /api/task/markTaskCompleted
 
 Request Body:
 json
-
+```bash
 {
   "task_id": 1
 }
+```
+Delete a task (soft delete): 
+
+DELETE /api/task/deleteTask
+
+Request Body:
+json
+```bash
+{
+  "task_id": 1
+}
+```
 Swagger Documentation
 This project includes Swagger API documentation for easier interaction with the API. The documentation provides detailed information about each API endpoint, request body parameters, and response formats.
 
@@ -97,13 +119,13 @@ http://localhost:3000/api-docs
 
 # Project Structure
 
-├── api.js               # Main API file with task routes and database logic
-├── server.js            # Entry point for the application
-├── swagger.js           # Swagger setup for documentation
-├── swagger.yaml         # Swagger configuration and routes definition
-├── package.json         # Project configuration and dependencies
-├── README.md            # Documentation for the project
-└── todolist.db          # SQLite database file (auto-created)
+├── api.js               # Main API file with task routes and database logic  
+├── server.js            # Entry point for the application  
+├── swagger.js           # Swagger setup for documentation  
+├── swagger.yaml         # Swagger configuration and routes definition  
+├── package.json         # Project configuration and dependencies  
+├── README.md            # Documentation for the project  
+└── todolist.db          # SQLite database file (auto-created)  
 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
