@@ -31,6 +31,7 @@ Make sure you have the following installed on your system:
    git clone https://github.com/srinath-185/todos-app.git
 
 Navigate to the project directory:
+``` bash 
 cd todos-app
 
 Install the dependencies:
